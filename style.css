@@ -1,3 +1,6 @@
+/* =========================================
+   TASK 1: ARCHITECTURE & VARIABLES
+   ========================================= */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
 :root {
@@ -54,4 +57,67 @@ form {
     background-color: #f2f2f2;
     padding: var(--padding-std);
     border: 2px solid var(--border-color);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse; 
+    margin: var(--space-md) 1; 
+    background-color: var(--color-surface); 
+}
+
+table, th, td {
+    border: 1px solid var(--color-muted); 
+}
+
+th, td {
+    padding: var(--space-sm); 
+    text-align: left;
+    font-family: var(--font-body);
+}
+
+thead {
+    background-color: var(--color-primary); 
+    color: black;
+}
+
+tbody tr:nth-child(even) {
+    background-color: rgba(0, 0, 0, 0.05); 
+}
+
+/* =========================================
+   TASK 2: TYPOGRAPHY & BOX MODEL
+   ========================================= */
+
+h1, h2, h3 {
+    font-family: var(--font-main);
+    color: var(--primary-blue);
+    margin-bottom: 1.5rem;
+}
+
+h2 { 
+    border-bottom: 2px solid var(--accent-orange); 
+    display: inline-block; 
+    padding-bottom: 5px; 
+}
+
+/* Apply Box Model to your Sections */
+section {
+    background-color: var(--white);
+    margin-bottom: 3rem;
+    padding: var(--padding-std); 
+    border: 1px solid #ddd;      
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);   
+}
+
+p {
+    margin-bottom: var(--gap);
+}
+
+/* Style your images from Lab 1 */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--radius);
 }
