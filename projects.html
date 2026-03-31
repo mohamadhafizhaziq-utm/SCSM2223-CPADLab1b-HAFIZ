@@ -14,8 +14,8 @@
             <p>My first portfolio using HTML</p>
         </div>
         <div class="header-image">
-        <img src="cat.jpg" alt="catmeme" width="150">
-    </div>
+            <img src="cat.jpg" alt="catmeme" width="150">
+        </div>
     </header>
 
     <nav>
@@ -29,34 +29,33 @@
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
+
     <main>
         <h2>Media & Projects</h2>
+        
+        <div class="card-grid">
+            
+            <figure class="card">
+                <img src="gambarhafiz.jpeg" alt="My selfie in Klebang Beach">
+                <figcaption>Figure 1: My Profile Picture</figcaption>
+            </figure>
 
-                <figure>
-                    <img src="gambarhafiz.jpeg" alt="My selfie in Klebang Beach" width="440" height="440" title="Hafiz Haziq">
-                    <figcaption>Figure 1: My Profile Picture</figcaption>
-                </figure>
+            <figure class="card">
+                <a href="https://www.figma.com/proto/jkhgOfWimFqKMrAIItwaQB?node-id=0-1&t=L4iUOziR9KU7LGYa-6" target="_blank">
+                    <img src="gambarprojek.png" alt="SRE Prototype">
+                </a>
+                <figcaption>Figure 2: Recent SRE project prototype.</figcaption>
+            </figure>
 
-                <hr>
+            <figure class="card featured">
+                <img src="gambarhafiz.jpeg" alt="Small Hafiz icon">
+                <figcaption>
+                    <strong>Featured: Native Structure</strong><br>
+                    Learning to build modern layouts without legacy attributes like align="right".
+                </figcaption>
+            </figure>
 
-                <h3>Recent Project</h3>
-                <p>Click the image below to view my SRE project prototype:</p>
-                <figure>
-                    <a href="https://www.figma.com/proto/jkhgOfWimFqKMrAIItwaQB?node-id=0-1&t=L4iUOziR9KU7LGYa-6" target="_blank">
-                    <img src="gambarprojek.png" alt="SRE Prototype" width="440" height="956">
-                    </a>
-                    <figcaption>Figure 2: Clicking this image will take you to my recent project prototype that I created last semester.</figcaption>
-                </figure>
-
-                <hr>
-
-                <h3>Try using figure attribute</h3>
-                <p>
-                <img src="gambarhafiz.jpeg" alt="Small Hafiz icon" width="100" height="100" title="Hafiz Haziq">
-                By using the <i>align="right"</i> attribute here, I am forcing this text to wrap around the image. 
-                This demonstrates how developers used to handle image positioning before CSS was the standard. 
-                I am currently learning how to build these structures natively.
-                </p>
-
+        </div>
     </main>
 </body>
+</html>
