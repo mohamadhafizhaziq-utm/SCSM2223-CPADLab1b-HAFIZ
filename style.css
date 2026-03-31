@@ -121,3 +121,56 @@ img {
     height: auto;
     border-radius: var(--radius);
 }
+
+/* =========================================
+   TASK 3: NAVIGATION & HEADER (FLEXBOX)
+   ========================================= */
+
+nav {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    background-color: var(--color-primary); 
+    padding: var(--space-md);
+    position: sticky; 
+    top: 0;
+    z-index: 1000; 
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: var(--space-md); 
+    flex-wrap: wrap; 
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: color 0.2s, background-color 0.2s; 
+}
+
+nav a:hover {
+    color: var(--color-accent);
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius);
+}
+
+nav a.active {
+    border-bottom: 2px solid var(--color-accent); 
+    font-weight: bold;
+}
+
+header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: var(--space-lg) 0;
+    flex-wrap: wrap; 
+}
+
+.header-text {
+    flex: 1; 
+    min-width: 300px;
+}
