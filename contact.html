@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="My personal portfolio">
+    <link rel="stylesheet" href="style.css">
+    <title>Media & Projects</title>
+</head>
+<body>
+    <main>
+        <h2>Contact Me</h2>
+
+                <form action="#" method="post">
+
+                    <fieldset>
+                        <legend>Personal Information</legend>
+
+                        <label for="fullname">Full Name:</label><br>
+                        <input type="text" id="fullname" name="fullname"
+                        placeholder="Enter your full name"
+                        required maxlength="60"><br><br>
+
+                        <label for="email">Email:</label><br>
+                        <input type="email" id="email" name="email"
+                        placeholder="Enter your email"
+                        required><br><br>
+
+                        <label for="phone">Phone Number:</label><br>
+                        <input type="tel" id="phone" name="phone"
+                        placeholder="012-3456789"
+                        required><br><br>
+
+                        <label for="age">Age:</label><br>
+                        <input type="number" id="age" name="age"
+                        min="18" max="100"
+                        required><br><br>
+
+                        <label for="date">Preferred Contact Date:</label><br>
+                        <input type="date" id="date" name="date"
+                        required><br><br>
+
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Message Details</legend>
+
+                        <label for="subject">Subject:</label><br>
+                        <select id="subject" name="subject">
+                            <optgroup label="General">
+                                <option value="question">Question</option>
+                                <option value="feedback">Feedback</option>
+                            </optgroup>
+
+                            <optgroup label="Business">
+                                <option value="job">Job Opportunity</option>
+                                <option value="project">Project Collaboration</option>
+                            </optgroup>
+                        </select><br><br>
+
+                        <!-- Radio buttons -->
+                        <p>Preferred Contact Method:</p>
+
+                        <input type="radio" id="email_contact" name="contact_method" value="email">
+                        <label for="email_contact">Email</label>
+
+                        <input type="radio" id="phone_contact" name="contact_method" value="phone">
+                        <label for="phone_contact">Phone</label>
+
+                        <input type="radio" id="whatsapp_contact" name="contact_method" value="whatsapp">
+                        <label for="whatsapp_contact">WhatsApp</label><br><br>
+
+                        <!-- Checkboxes -->
+                        <p>Services Interested:</p>
+
+                        <input type="checkbox" id="webdev" name="service" value="webdev">
+                        <label for="webdev">Web Development</label>
+
+                        <input type="checkbox" id="design" name="service" value="design">
+                        <label for="design">Design</label>
+
+                        <input type="checkbox" id="consult" name="service" value="consult">
+                        <label for="consult">Consultation</label><br><br>
+
+                        <!-- Textarea -->
+                        <label for="message">Message:</label><br>
+                        <textarea id="message" name="message"
+                            rows="4" cols="40"
+                            placeholder="Write your message here..."></textarea><br><br>
+
+                    </fieldset>
+
+                    <button type="submit">
+                        Submit
+                    </button>
+
+                </form>
+    </main>
+</body>
