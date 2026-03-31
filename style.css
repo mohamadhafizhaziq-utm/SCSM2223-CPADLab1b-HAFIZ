@@ -174,3 +174,77 @@ header {
     flex: 1; 
     min-width: 300px;
 }
+
+/* =========================================
+   TASK 4: CSS GRID LAYOUTS
+   ========================================= */
+
+/* 4.1 Projects Page: Responsive Card Grid */
+.card-grid {
+    display: grid;
+    /* This creates as many columns as possible, minimum 260px each */
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.card {
+    background-color: var(--white);
+    padding: var(--padding-std);
+    border: 1px solid #ddd;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    /* Task 4.3: Smooth transition for the hover effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Task 4.3: Visual Polish - Card Lift on Hover */
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* Task 4.2: Grid Spanning (Make the "Featured" card wider) */
+.featured {
+    grid-column: span 2;
+}
+
+/* 4.2 About Page: Sidebar Layout */
+.sidebar-layout {
+    display: grid;
+    /* Main content takes most space (1fr), Sidebar is fixed (280px) */
+    grid-template-columns: 1fr 280px;
+    gap: 3rem;
+    align-items: start;
+    margin-top: 2rem;
+}
+
+.sidebar {
+    background-color: #f9f9f9;
+    padding: var(--padding-std);
+    border-radius: var(--radius);
+    border: 1px solid #eee;
+}
+
+.sidebar h3 {
+    color: var(--primary-blue);
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--accent-orange);
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar li {
+    margin-bottom: 0.8rem;
+    font-size: 1.5rem;
+}
+
+/* Ensure images inside grid cards behave correctly */
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
