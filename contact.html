@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="My personal portfolio">
     <link rel="stylesheet" href="style.css">
-    <title>Media & Projects</title>
+    <title>Contact Me</title>
 </head>
 <body>
     <header>
@@ -14,8 +14,8 @@
             <p>My first portfolio using HTML</p>
         </div>
         <div class="header-image">
-        <img src="cat.jpg" alt="catmeme" width="150">
-    </div>
+            <img src="cat.jpg" alt="catmeme" width="150">
+        </div>
     </header>
 
     <nav>
@@ -29,92 +29,80 @@
             <li><a href="contact.html" class="active">Contact</a></li>
         </ul>
     </nav>
-    <main>
+
+    <main class="form-container">
         <h2>Contact Me</h2>
 
-                <form action="#" method="post">
+        <form action="#" method="post">
+            <fieldset>
+                <legend>Personal Information</legend>
 
-                    <fieldset>
-                        <legend>Personal Information</legend>
+                <div class="form-group">
+                    <label for="fullname">Full Name:</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required maxlength="60">
+                </div>
 
-                        <label for="fullname">Full Name:</label><br>
-                        <input type="text" id="fullname" name="fullname"
-                        placeholder="Enter your full name"
-                        required maxlength="60"><br><br>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
 
-                        <label for="email">Email:</label><br>
-                        <input type="email" id="email" name="email"
-                        placeholder="Enter your email"
-                        required><br><br>
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="012-3456789" required>
+                </div>
 
-                        <label for="phone">Phone Number:</label><br>
-                        <input type="tel" id="phone" name="phone"
-                        placeholder="012-3456789"
-                        required><br><br>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="age">Age:</label>
+                        <input type="number" id="age" name="age" min="18" max="100" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="date">Preferred Contact Date:</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+                </div>
+            </fieldset>
 
-                        <label for="age">Age:</label><br>
-                        <input type="number" id="age" name="age"
-                        min="18" max="100"
-                        required><br><br>
+            <fieldset>
+                <legend>Message Details</legend>
 
-                        <label for="date">Preferred Contact Date:</label><br>
-                        <input type="date" id="date" name="date"
-                        required><br><br>
+                <div class="form-group">
+                    <label for="subject">Subject:</label>
+                    <select id="subject" name="subject">
+                        <optgroup label="General">
+                            <option value="question">Question</option>
+                            <option value="feedback">Feedback</option>
+                        </optgroup>
+                        <optgroup label="Business">
+                            <option value="job">Job Opportunity</option>
+                            <option value="project">Project Collaboration</option>
+                        </optgroup>
+                    </select>
+                </div>
 
-                    </fieldset>
+                <div class="form-group">
+                    <p>Preferred Contact Method:</p>
+                    <label class="radio-label"><input type="radio" name="contact_method" value="email"> Email</label>
+                    <label class="radio-label"><input type="radio" name="contact_method" value="phone"> Phone</label>
+                    <label class="radio-label"><input type="radio" name="contact_method" value="whatsapp"> WhatsApp</label>
+                </div>
 
-                    <fieldset>
-                        <legend>Message Details</legend>
+                <div class="form-group">
+                    <p>Services Interested:</p>
+                    <label class="checkbox-label"><input type="checkbox" name="service" value="webdev"> Web Development</label>
+                    <label class="checkbox-label"><input type="checkbox" name="service" value="design"> Design</label>
+                    <label class="checkbox-label"><input type="checkbox" name="service" value="consult"> Consultation</label>
+                </div>
 
-                        <label for="subject">Subject:</label><br>
-                        <select id="subject" name="subject">
-                            <optgroup label="General">
-                                <option value="question">Question</option>
-                                <option value="feedback">Feedback</option>
-                            </optgroup>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Write your message here..."></textarea>
+                </div>
+            </fieldset>
 
-                            <optgroup label="Business">
-                                <option value="job">Job Opportunity</option>
-                                <option value="project">Project Collaboration</option>
-                            </optgroup>
-                        </select><br><br>
-
-                        <!-- Radio buttons -->
-                        <p>Preferred Contact Method:</p>
-
-                        <input type="radio" id="email_contact" name="contact_method" value="email">
-                        <label for="email_contact">Email</label>
-
-                        <input type="radio" id="phone_contact" name="contact_method" value="phone">
-                        <label for="phone_contact">Phone</label>
-
-                        <input type="radio" id="whatsapp_contact" name="contact_method" value="whatsapp">
-                        <label for="whatsapp_contact">WhatsApp</label><br><br>
-
-                        <!-- Checkboxes -->
-                        <p>Services Interested:</p>
-
-                        <input type="checkbox" id="webdev" name="service" value="webdev">
-                        <label for="webdev">Web Development</label>
-
-                        <input type="checkbox" id="design" name="service" value="design">
-                        <label for="design">Design</label>
-
-                        <input type="checkbox" id="consult" name="service" value="consult">
-                        <label for="consult">Consultation</label><br><br>
-
-                        <!-- Textarea -->
-                        <label for="message">Message:</label><br>
-                        <textarea id="message" name="message"
-                            rows="4" cols="40"
-                            placeholder="Write your message here..."></textarea><br><br>
-
-                    </fieldset>
-
-                    <button type="submit">
-                        Submit
-                    </button>
-
-                </form>
+            <button type="submit" class="btn-submit">Submit Message</button>
+        </form>
     </main>
 </body>
+</html>
